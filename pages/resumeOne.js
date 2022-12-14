@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react"
 
 export default function ResumePage() {
@@ -12,7 +13,7 @@ export default function ResumePage() {
 
   return (
     <div className="flex items-center relative min-w-full h-982">
-      <img src="/liftOff.jpg"  style={{ opacity: imageOpacity }} />
+      <Image src="liftOff.jpg" alt="A spaceship" style={{ opacity: imageOpacity }} />
 
       <div className='flex items-center relative min-w-full h-982 bg-bgImage bg-100% bg-no-repeat'>
     </div>

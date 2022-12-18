@@ -14,14 +14,29 @@ export default function Home() {
       <main className='relative w-screen'>
         <div className='container w-screen h-screen bg-bgImage bg-100% bg-no-repeat flex items-center justify-around'>
           <div className='innerContainer w-4/5 h-3/5 flex justify-between space-x-8'>
-            <div className='sideDesc relative '>
+            <div className='sideDesc relative items-center'>
               <div className=' relative w-[66.9px] h-[66.9px] -bottom-[64.6%] rounded-[37px] bg-[#1A4680]'>
-                <div className=' relative  left-4 top-2'>
+                <div className=' relative flex flex-row order-1 left-4 top-2'>
                   <p className='w-[12.95px] h-[20.21px] font-[500] text-center text-[18.65px] text-[#fff] font-futura tracking-[0.03em] leading-[25px]'>4</p>
+                  <p className='w-[12px] h-[11px] font-[500] text-[8.29px] relative top-2 text-center text-[#fff] font-futura tracking-[0.03em] leading-[11px]'>yrs</p>
                 </div>
-                <div className=' relative w-[28px] h-[20px]'>
+                <div className=' relative top-[10px] left-4 w-[28px] h-[20px]'>
                   <p className='font-[400] text-[8.65px] text-[#fff] font-futura tracking-[0.03em] leading-[10px]'>Product Design</p>
                 </div>
+              </div>
+              <div className='flex  relative -bottom-[67%] left-4 space-x-0.5 space-y-0.5'>
+                <p className=' w-[12px] h-[20px] font-[500] text-center text-[18.65px] text-[#1A4680] font-futura tracking-[0.03em] leading-[25px]'>8</p>
+                <p className='text-[#1A4680] font-futura tracking-[0.03em] leading-[11px] w-[12px] h-[11px] font-[500] text-[8.29px] relative top-2 text-center'>yrs</p>
+              </div>
+              <div className=' flex relative -bottom-[67.5%] left-4  order-1 w-[28px] h-[20px]'>
+                  <p className='font-[400] text-[8.65px] text-[#1A4680] font-futura tracking-[0.03em] leading-[10px]'>Graphics Design</p>
+              </div>
+              <div className='flex  relative -bottom-[72%] left-4 space-x-0.5 space-y-0.5'>
+                <p className=' w-[12px] h-[20px] font-[500] text-center text-[18.65px] text-[#1A4680] font-futura tracking-[0.03em] leading-[25px]'>30</p>
+                <p className='text-[#1A4680] font-futura tracking-[0.03em] w-[6px] h-[11px] left-3 font-[500] text-[8.29px] relative top-1 text-center'>+</p>
+              </div>
+              <div className=' flex relative -bottom-[72.5%] left-4  order-1 w-[28px] h-[20px]'>
+                  <p className='font-[400] text-[8.65px] text-[#1A4680] font-futura tracking-[0.03em] leading-[10px]'>Completed Projects</p>
               </div>
             </div>
             <div className='frameL w-1/4 h-full bg-spaceMan bg-contain'></div>

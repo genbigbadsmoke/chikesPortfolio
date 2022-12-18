@@ -7,13 +7,19 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        '441': '441px',
+        '3/4': '73%',
         '739': '739px',
         '1512': '1512px',
       },
       height: {
         '585': '585px',
         '982': '982px',
+      }, 
+      fontFamily: {
+        'futura': 'futura',
+      },
+      bottom: {
+        '2/3': '64.6%',
       },
       backgroundImage: {
         'bgImage': "url('/bgimg.jpg')",
@@ -21,7 +27,7 @@ module.exports = {
         'liftOff': "url('/liftOff.jpg')"
       },
       backgroundSize: {
-        '100%': '100%',
+        '100%': '100vw',
       },
     },
   },

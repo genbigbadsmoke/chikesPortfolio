@@ -14,7 +14,10 @@ a {
   box-sizing: border-box;
 }
 
-img {
-  width: fit-content;
-  height: fit-content;
+
+@layer base {
+  @font-face {
+    font-family: 'Futura';
+    src: url(/fonts/futur.ttf) format(ttf);
+  }
 }

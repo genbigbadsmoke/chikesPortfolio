@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { RiRocket2Line } from 'react-icons/ri'
+
 
 export default function Home() {
+  
   return (
     <div>
       <Head>
@@ -47,6 +48,11 @@ export default function Home() {
                   alt='An Astronaut'
                   fill
                 />
+              </div>
+              <div className='animatedText'>
+                <p>Chike Designrs</p>
+                <p className='p1'>Space Station</p>
+                <p></p>
               </div>
             </div>
             <div className='frameR w-[61.04vw] flex-col bg-white shadow-[0_4px_50px_rgba(0,0,0,0.1)] space-y-4'>

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import { RiRocket2Line } from 'react-icons/ri'
 
@@ -11,9 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='relative w-screen'>
-        <div className='container w-screen h-screen bg-bgImage bg-100% bg-no-repeat flex items-center justify-around'>
-          <div className='innerContainer w-4/5 h-3/5 flex justify-between space-x-8'>
+      <main className='bg-bgImage bg-100% bg-no-repeat w-[100vw] left-64'>
+        <div className='container w-[100vw] h-[100vh] flex items-center justify-around'>
+          <div className='relative left-64 innerContainer w-[80.06vw] h-[59.15vh] flex justify-between space-x-8'>
             <div className='sideDesc relative items-center'>
               <div className=' relative w-[66.9px] h-[66.9px] -bottom-[64.6%] rounded-[37px] bg-[#1A4680]'>
                 <div className=' relative flex flex-row order-1 left-4 top-2'>
@@ -39,24 +40,32 @@ export default function Home() {
                   <p className='font-[400] text-[8.65px] text-[#1A4680] font-futura tracking-[0.03em] leading-[10px]'>Completed Projects</p>
               </div>
             </div>
-            <div className='frameL w-1/4 h-full bg-spaceMan bg-contain'></div>
-            <div className='frameR w-3/4 flex-col bg-white shadow-[0_4px_50px_rgba(0,0,0,0.1)]'>
-              <div className='frameRtext relative items-start w-3/4 h-[222px] order-1 p-0 grow-0 gap-5 top-20 left-20'>
-                  <div className='frt1 w-[35vw] h-[159px] items-end align-middle gap-9'>
+            <div className='frameL w-[36.446vw] h-full bg-yellow-500'>
+              <div className='frameLchild relative w-[92%] h-[65.9%] left-[4%] top-[10%] rotate-[-11.23deg]'>
+                <Image
+                  src='/Astronaut.png'
+                  alt='An Astronaut'
+                  fill
+                />
+              </div>
+            </div>
+            <div className='frameR w-[61.04vw] flex-col bg-white shadow-[0_4px_50px_rgba(0,0,0,0.1)] space-y-4'>
+              <div className='frameRtext relative items-start w-[73%] h-[37%] order-1 p-0 grow-0 gap-5 top-20 left-20'>
+                  <div className='frt1 w-[100%] h-[71%] items-end align-middle gap-9'>
                     <h3 className=' text-4xl font-[500] font-futura tracking-[0.03em] text-[#0C6AA1] leading-[43px] gap-9'>Hi, I am</h3>
                     <h2 className=' text-7xl font-[700] font-futura text-[#1A4680] tracking-[0.03em] leading-[95px] gap-9'>Chike Elenwo</h2>
                   </div>
-                  <div className=' items-end w-3/4 h-[43px]'>
+                  <div className=' items-end w-[100%] h-[9.9%]'>
                     <p className='text-[#0C6AA1] font-[400] text-[36px] gap-9 leading-[43px] tracking-[0.03em]'>Welcome to my portfolio</p>
                 </div>
               </div>
-              <div className='frameRtext relative flex items-start flex-col w-3/4 h-[162px] top-28 p-0 grow-0 order-1 left-20 gap-[38px]'>
-                <div className=' w-[35.714vw] h-[76px] space-y-4'>
+              <div className='frameRtext relative flex items-start flex-col w-[73%] h-[27%] top-28 p-0 grow-0 order-1 left-20 gap-[38px]'>
+                <div className=' w-[100%] h-[47%] space-y-4'>
                   <p className='text-[#0C6AA1] font-futura font-[400] text-[16px] leading-[19px] tracking-[0.03em]'>I advice that you fasten your seatbelts and   secure all your attention as what you are about to see will blow your mind.</p>
                   <p className='text-[#0C6AA1] font-futura font-[400] text-[16px] leading-[19px] tracking-[0.03em]'>Click the button below when you are ready for lift-off.</p>
                 </div>
-                <div className=' w-[15.807vw] h-[48px]  items-end'>
-                  <button className='w-[239px] h-[48px]  bg-[#1A4680]'>
+                <div className=' w-[44%] h-[29%]  items-end'>
+                  <button className='w-[100%] h-[100%]  bg-[#1A4680]'>
                     <Link className='text-[#fff]' href='/resumeOne'>
                       <div className='flex flex-row items-center justify-center py-[13px] px-[39px]'>
                         <p>Lift Off</p> 

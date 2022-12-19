@@ -23,7 +23,7 @@ module.exports = {
       },
       backgroundImage: {
         'bgImage': "url('/bgimg.jpg')",
-        'spaceMan': "url('/Space.jpg')",
+        'spaceMan': "url('/Astronaut.png')",
         'liftOff': "url('/liftOff.jpg')"
       },
       backgroundSize: {

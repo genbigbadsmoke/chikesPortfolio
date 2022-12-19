@@ -1,9 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import React from 'react'
 
 
 export default function Home() {
+  const [isLoading, setIsLoading] = React.useState(false)
+
+  const handlebuttonClick = () => {
+    setIsLoading(true);
+  }
 
   return (
     <div>
@@ -71,7 +77,7 @@ export default function Home() {
                   <p className='text-[#0C6AA1] font-futura font-[400] text-[16px] leading-[19px] tracking-[0.03em]'>Click the button below when you are ready for lift-off.</p>
                 </div>
                 <div className=' w-[44%] h-[29%]  items-end'>
-                  <button className='w-[100%] h-[100%]  bg-[#1A4680]'>
+                  <button onClick={handlebuttonClick} className='w-[100%] h-[100%]  bg-[#1A4680]'>
                     <Link className='text-[#fff]' href='/resumeOne'>
                       <div className='flex flex-row items-center justify-center py-[13px] px-[39px]'>
                         <p>Lift Off</p> 

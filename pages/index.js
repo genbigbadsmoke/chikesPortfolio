@@ -2,13 +2,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Loader from '../components/Loader'
+import Date from '../components/Date'
 
 
 export default function Home() {
-  const [isLoading, setIsLoading] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
 
   const handlebuttonClick = () => {
-    setIsLoading(true);
+    setLoading ({loading: true})
+    setTimeout(() => {
+      setLoading({loading: false})
+    }, 5000)
   }
 
   return (
@@ -21,7 +26,7 @@ export default function Home() {
 
       <main className='bg-bgImage bg-100% bg-no-repeat w-[100vw] left-64'>
         <div className='container w-[100vw] h-[100vh] flex items-center justify-around'>
-          <div className='relative left-64 innerContainer w-[80.06vw] h-[59.15vh] flex justify-between space-x-8'>
+          <div className='relative left-60 innerContainer w-[80.06vw] h-[59.15vh] flex justify-between space-x-8'>
             <div className='sideDesc relative items-center'>
               <div className=' relative w-[66.9px] h-[66.9px] -bottom-[64.6%] rounded-[37px] bg-[#1A4680]'>
                 <div className=' relative flex flex-row order-1 left-4 top-2'>
@@ -53,12 +58,11 @@ export default function Home() {
                   src='/Astronaut.png'
                   alt='An Astronaut'
                   fill
+                  sizes="(min-width: 1200) 50vw"
                 />
               </div>
               <div className='animatedText'>
-                <p>Chike Designrs</p>
-                <p className='p1'>Space Station</p>
-                <p></p>
+                <p>Chike Designrs<br />Space Station<br /><Date /></p>
               </div>
             </div>
             <div className='frameR w-[61.04vw] flex-col bg-white shadow-[0_4px_50px_rgba(0,0,0,0.1)] space-y-4'>
@@ -77,12 +81,15 @@ export default function Home() {
                   <p className='text-[#0C6AA1] font-futura font-[400] text-[16px] leading-[19px] tracking-[0.03em]'>Click the button below when you are ready for lift-off.</p>
                 </div>
                 <div className=' w-[44%] h-[29%]  items-end'>
-                  <button onClick={handlebuttonClick} className='w-[100%] h-[100%]  bg-[#1A4680]'>
-                    <Link className='text-[#fff]' href='/resumeOne'>
-                      <div className='flex flex-row items-center justify-center py-[13px] px-[39px]'>
-                        <p>Lift Off</p> 
-                      </div>
-                    </Link>
+                  <button onClick={handlebuttonClick} disabled={loading} className='w-[100%] h-[100%] text-[#fff] bg-[#1A4680]'>
+                    <Link href='/resumeOne'>
+                      {/* {loading && (<Loader />)} */}
+                      {loading && <div className='flex flex-row items-center justify-center py-[13px] px-[39px] space-x-2'>
+                          <div><p>Lift Off</p></div>
+                          <div><Loader /></div>
+                        </div> }
+                      {!loading && <div><p>Lift Off</p></div> }
+                    </Link> 
                   </button>
                 </div>
               </div>
